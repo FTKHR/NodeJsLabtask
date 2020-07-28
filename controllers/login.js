@@ -8,11 +8,11 @@ router.get('/', function(req, res){
 
 router.post('/', function(req, res){
 
-	if(req.body.uname && req.body.password=="admin"){
+	if(req.body.uname && req.body.uname == "admin"){
 		res.redirect('/admin');
     }
-    else if(req.body.uname && req.body.password=="member"){
-        res.redirect('/employee');
+    else if(req.body.uname && req.body.uname == "member"){
+        res.redirect('/employee/');
     }
     else 
     {
