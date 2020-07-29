@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>All Employee</title>
+    </head>
+    <body>
+        <fieldset>
+            <h1>Employee list</h1>
+            
+                <table border="1">
+                    <tr>
+                        <th>ID:</th>
+                        <th>Name:</th>
+                        <th>Phone:</th>
+                        <th>Adress:</th>
+                        <th>Gender:</th>
+                        <th>Designation:</th>
+                        
+                    </tr>
+                    <tr>
+                        <form method="post">
+                            <td><%=first.id%></td>  
+                            <td><%=first.name%></td>    
+                            <td><%=first.phone%></td>
+                            <td><%=first.adress%></td>
+                            <td><%=first.gender%></td>
+                            <td><%=first.designation%></td>
+                            <td><input type="submit" name="choice" value="update"></td>
+                            <td><input type="submit" name="choice" value="delete"></td>
+                            <input type="hiden" name="getID" value="<%=first.id%>">
+                        </form>
+                    </tr>
+                    <tr>
+                        <form method="post">
+                            <td><%=second.id%></td>  
+                            <td><%=second.name%></td>    
+                            <td><%=second.phone%></td>
+                            <td><%=second.adress%></td>
+                            <td><%=second.gender%></td>
+                            <td><%=second.designation%></td>
+                            <td><input type="submit" name="choice" value="update"></td>
+                            <td><input type="submit" name="choice" value="delete"></td>
+                            <input type="hiden" name="getID" value="<%=second.id%>">
+                        </form>
+                    </tr>
+                    
+                </table>
+            </form>
+            
+        </fieldset>
+    </body>
+</html>
