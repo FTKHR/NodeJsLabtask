@@ -16,6 +16,9 @@ router.post('/',function(req,res) {
 router.get('/addEmployee', function (req, res) {
 	res.render('admin/addEmployee');
 })
+router.post('/addEmployee', function (req, res) {
+	res.send('Employee added');
+})
 router.get('/allEmployeeList',function (req,res) {
 	var employee1={
 		id:1,
@@ -73,6 +76,10 @@ router.get('/update/:id',function(req,res) {
 	}
 	
 })
+router.post('/update/:id',function (req,res) {
+	res.send('Employee updated');
+})
+
 router.get('/delete/:id',function(req,res) {
 	if(req.params.id=='1'){
 		data={
@@ -97,5 +104,14 @@ router.get('/delete/:id',function(req,res) {
 		res.render('admin/delete',data);
 	}
 	
+})
+
+router.post('/delete/:id',function (req,res) {
+	if(req.body.delete=="yes"){
+		res.send('Employee deleted');
+	}
+	else{
+		res.redirect('/admin/allEmployeeList');
+	}
 })
 module.exports = router;
