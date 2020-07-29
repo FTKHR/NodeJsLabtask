@@ -41,10 +41,60 @@ router.get('/allEmployeeList',function (req,res) {
 })
 router.post('/allEmployeeList',function(req,res) {
 	if(req.body.choice=="update"){
-
+		res.redirect('update/'+req.body.getID);
 	}
 	if(req.body.choice=="delete"){
-		
+		res.redirect('delete/'+req.body.getID);
+	}
+	
+})
+router.get('/update/:id',function(req,res) {
+	if(req.params.id=='1'){
+		data={
+			id:1,
+			name:'Iftekhar',
+			phone:'012345678910',
+			adress:'Mirpur',
+			gender:'Male',
+			designation:'Engineer'
+		}
+		res.render('admin/update',data);
+	}
+	if(req.params.id=='2'){
+		var data={
+			id:2,
+			name:'Alam',
+			phone:'016745678910',
+			adress:'Uttara',
+			gender:'Male',
+			designation:'Manager'
+		}
+		res.render('admin/update',data);
+	}
+	
+})
+router.get('/delete/:id',function(req,res) {
+	if(req.params.id=='1'){
+		data={
+			id:1,
+			name:'Iftekhar',
+			phone:'012345678910',
+			adress:'Mirpur',
+			gender:'Male',
+			designation:'Engineer'
+		}
+		res.render('admin/delete',data);
+	}
+	if(req.params.id=='2'){
+		var data={
+			id:2,
+			name:'Alam',
+			phone:'016745678910',
+			adress:'Uttara',
+			gender:'Male',
+			designation:'Manager'
+		}
+		res.render('admin/delete',data);
 	}
 	
 })
