@@ -19,6 +19,8 @@ router.get('/profile',function(req,res){
     var data={
         name:'Iftekhar',
         phone:'012345678910',
+        adress:'Mirpur',
+        gender:'Male',
         designation:'Engineer'
     }
     res.render('employee/profile',data);
@@ -27,6 +29,8 @@ router.get('/update',function(req,res){
     var data={
         name:'Iftekhar',
         phone:'012345678910',
+        adress:'Mirpur',
+        gender:'Male',
         designation:'Engineer'
     }
     res.render('employee/update',data);
@@ -36,6 +40,8 @@ router.post('/update', function(req, res){
 	var data={
         name : req.body.name,
         phone : req.body.phone,
+        adress:req.body.adress,
+        gender:req.body.gender,
         designation : req.body.designation
     }
     res.render('employee/profile',data);

@@ -17,8 +17,30 @@
                         <td><input type="text" name="phone" value="<%=phone%>"></td>
                     </tr>
                     <tr>
+                        <td>Adress:</td>
+                        <td><input type="text" name="adress" value="<%=adress%>"></td>
+                    </tr>
+                     <tr>
+                        <td>Gender:</td>
+                        <td>
+                            <select name="gender">
+                                <option value=""></option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </td>
+                    </tr>
+                     <tr>
                         <td>Designation:</td>
-                        <td><input type="text" name="designation" value="<%=designation%>"></td>
+                        <td>
+                            <select name="designation">
+                                <option value=""></option>
+                                <option value="engineer">Engineer</option>
+                                <option value="assistant">Assistant</option>
+                                <option value="manager">Manager</option>
+                            </select>
+                        </td>
                     </tr>
                     <tr>
                         <td><input type="submit" name="update" value="submit"></td>
